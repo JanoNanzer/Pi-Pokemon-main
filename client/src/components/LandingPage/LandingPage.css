@@ -1,0 +1,115 @@
+.landing {
+  background-image: url("../PokemonImages/studio-pokedex.gif");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.titleLanding {
+  margin: 0px;
+  font-family: AlleynW01-Regular;
+}
+
+.animated-button1 {
+  background: #000000c7;
+  border-radius: 4px;
+  padding: 50px 11px;
+  display: inline-block;
+  transform: translate(0%, 0%);
+  overflow: hidden;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: absolute;
+  top: 268px;
+  left: 425px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.animated-button1:hover {
+  background-color: rgba(255, 255, 255, 0.685);
+  color: black;
+}
+
+.animated-button1 span {
+  position: absolute;
+}
+
+.animated-button1 span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, rgba(43, 8, 8, 0), #d92626);
+  animation: 2s animateTop linear infinite;
+}
+
+@keyframes animateTop {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.animated-button1 span:nth-child(2) {
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to top, rgba(43, 8, 8, 0), #d92626);
+  animation: 2s animateRight linear -1s infinite;
+}
+
+@keyframes animateRight {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animated-button1 span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, rgba(43, 8, 8, 0), #d92626);
+  animation: 2s animateBottom linear infinite;
+}
+
+@keyframes animateBottom {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animated-button1 span:nth-child(4) {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #d92626);
+  animation: 2s animateLeft linear -1s infinite;
+}
+
+@keyframes animateLeft {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

@@ -1,0 +1,13 @@
+.loadingTitle {
+  margin: 0px;
+  padding: 5px;
+  font-family: AlleynW01-Regular;
+}
+
+.squirtle {
+  position: absolute;
+  height: 60%;
+  border-radius: 90px;
+  top: 34%;
+  left: 38%;
+}

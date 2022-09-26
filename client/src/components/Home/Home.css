@@ -1,0 +1,102 @@
+body {
+  background-image: url("../PokemonImages/966315.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-position: center;
+  margin: 0px;
+  height: 100vh;
+  user-select: none;
+}
+
+.divPokesHome {
+  gap: 46px;
+  margin: 0 110px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.cardsHome {
+  border-radius: 5px;
+  max-width: 125px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.linksTop {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+
+.linkTop {
+  text-decoration: underline;
+  font-size: 25px;
+  color: #000000;
+  font-weight: 700;
+  font-family: AlleynW01-Regular;
+  transition: color 0.5s;
+}
+
+.linkTop:hover {
+  color: rgb(255, 255, 255);
+}
+
+.filtrosNav {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  box-shadow: -10px 10px 20px -10px;
+}
+
+.imageMew {
+  width: 17%;
+}
+
+.filtrosSelect {
+  border-radius: 13px;
+  background: linear-gradient(
+    52deg,
+    rgb(206, 166, 225, 0.5) 0%,
+    rgba(192, 146, 255, 0.5) 20%,
+    rgba(146, 146, 255, 0.5) 45%,
+    rgba(110, 147, 255, 0.5) 70%,
+    rgba(52, 151, 255, 0.5) 100%
+  );
+
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.buttonReload {
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* rgb(206 166 225)  rosa claro*/
+/* rgb(192 146 255) rosa oscuro */
+/* rgb(146 146 255) violeta azul */
+/* rgb(110 147 255) azul */
+/* rgb(52 151 255) azul top */
+/* background: linear-gradient(
+  52deg,
+  rgba(206, 166, 225, 1) 0%,
+  rgba(192, 146, 255, 1) 20%,
+  rgba(146, 146, 255, 1) 45%,
+  rgba(110, 147, 255, 1) 70%,
+  rgba(52, 151, 255, 1) 100%
+); */
+
+@import url(//db.onlinewebfonts.com/c/faa9c8362473bf8b1d2886cfb5962735?family=AlleynW01-Regular);
+
+.titleTop {
+  font-family: AlleynW01-Regular;
+}

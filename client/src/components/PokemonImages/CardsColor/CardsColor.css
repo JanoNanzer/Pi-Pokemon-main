@@ -1,0 +1,247 @@
+.NORMAL {
+  background-color: #a8a77a;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+  transition: background-color 0.5s;
+}
+.NORMAL:hover {
+  box-shadow: 0px 0px 15px -1px #c2c1a2;
+}
+
+.FIRE {
+  background-color: #ee8130;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+  transition: background-color 0.5s;
+}
+.FIRE:hover {
+  /* background-color: #e97115; */
+  box-shadow: 0px 0px 15px -1px #f19b59;
+}
+
+.WATER {
+  background-color: #6390f0;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.WATER:hover {
+  /* background-color: #5982d8; */
+  box-shadow: 0px 0px 15px -1px #82a6f3;
+}
+
+.ELECTRIC {
+  background-color: #f7d02c;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.ELECTRIC:hover {
+  /* background-color: #f9dd6b; */
+  box-shadow: 0px 0px 15px -1px #f9dd6b;
+}
+
+.GRASS {
+  background-color: #7ac74c;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.GRASS:hover {
+  /* background-color: #94d270; */
+  box-shadow: 0px 0px 15px -1px #94d270;
+}
+
+.ICE {
+  background-color: #96d9d6;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.ICE:hover {
+  /* background-color: #abe1de; */
+  box-shadow: 0px 0px 15px -1px #abe1de;
+}
+
+.FIGHTING {
+  background-color: #c22e28;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.FIGHTING:hover {
+  /* background-color: #ce5753; */
+  box-shadow: 0px 0px 15px -1px #ce5753;
+}
+
+.POISON {
+  background-color: #a33ea1;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.POISON:hover {
+  /* background-color: #b565b4; */
+  box-shadow: 0px 0px 15px -1px #b565b4;
+}
+
+.GROUND {
+  background-color: #e2bf65;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.GROUND:hover {
+  /* background-color: #e8cc84; */
+  box-shadow: 0px 0px 15px -1px #e8cc84;
+}
+
+.FLYING {
+  background-color: #a98ff3;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.FLYING:hover {
+  /* background-color: #bba5f5; */
+  box-shadow: 0px 0px 15px -1px #bba5f5;
+}
+
+.PSYCHIC {
+  background-color: #f95587;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.PSYCHIC:hover {
+  /* background-color: #fa779e; */
+  box-shadow: 0px 0px 15px -1px #fa779e;
+}
+
+.BUG {
+  background-color: #a6b91a;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.BUG:hover {
+  /* background-color: #b8c748; */
+  box-shadow: 0px 0px 15px -1px #b8c748;
+}
+
+.ROCK {
+  background-color: #b6a136;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.ROCK:hover {
+  /* background-color: #c5b45e; */
+  box-shadow: 0px 0px 15px -1px #c5b45e;
+}
+
+.GHOST {
+  background-color: #735797;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.GHOST:hover {
+  /* background-color: #8f79ac; */
+  box-shadow: 0px 0px 15px -1px #8f79ac;
+}
+
+.DRAGON {
+  background-color: #6f35fc;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.DRAGON:hover {
+  /* background-color: #8b5dfd; */
+  box-shadow: 0px 0px 15px -1px #8b5dfd;
+}
+
+.DARK {
+  background-color: #705746;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.DARK:hover {
+  /* background-color: #8d796b; */
+  box-shadow: 0px 0px 15px -1px #8d796b;
+}
+
+.STEEL {
+  background-color: #b7b7ce;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.STEEL:hover {
+  /* background-color: #c5c5d8; */
+  box-shadow: 0px 0px 15px -1px #c5c5d8;
+}
+
+.FAIRY {
+  background-color: #d685ad;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+}
+.FAIRY:hover {
+  /* background-color: #de9dbd; */
+  box-shadow: 0px 0px 15px -1px #de9dbd;
+}
+
+.SHADOW {
+  background-color: #000000;
+  border-radius: 26%;
+  height: 20px;
+  padding: 6px;
+  cursor: default;
+  color: white;
+}
+.SHADOW:hover {
+  box-shadow: 0px 0px 15px -1px #191919;
+}
+
+/* normal: '#A8A77A',
+fire: '#EE8130',
+water: '#6390F0',
+electric: '#F7D02C',
+grass: '#7AC74C',
+ice: '#96D9D6',
+fighting: '#C22E28',
+poison: '#A33EA1',
+ground: '#E2BF65',
+flying: '#A98FF3',
+psychic: '#F95587',
+bug: '#A6B91A',
+rock: '#B6A136',
+ghost: '#735797',
+dragon: '#6F35FC',
+dark: '#705746',
+steel: '#B7B7CE',
+fairy: '#D685AD', */

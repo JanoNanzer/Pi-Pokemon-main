@@ -1,0 +1,61 @@
+.cards {
+  background-color: rgba(177, 41, 41, 0.15);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cards:hover {
+  box-shadow: 2px 2px 5px #000000;
+}
+
+.cardImage {
+  min-width: 130px;
+  max-width: 130px;
+  height: 130px;
+  object-fit: contain;
+  visibility: visible;
+}
+
+.divTypesCard {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.pokeName {
+  margin: 0px;
+  text-decoration: none;
+  color: rgb(41, 37, 37);
+}
+
+.cardType:hover .typesNameChild {
+  visibility: visible;
+  animation: fadeIn 0.5s;
+}
+
+.typesNameFather {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+.typesNameChild {
+  visibility: hidden;
+  color: #000000;
+  font-weight: 300;
+  position: absolute;
+  left: -10px;
+  top: -2px;
+}

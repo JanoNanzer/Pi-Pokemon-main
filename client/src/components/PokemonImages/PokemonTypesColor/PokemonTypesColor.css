@@ -1,0 +1,175 @@
+.normal {
+  background-color: #a8a77a;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.fire {
+  background-color: #ed8230;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.water {
+  cursor: pointer;
+  cursor: pointer;
+  background-color: #6390f0;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.electric {
+  padding: 12%;
+  border-radius: 20%;
+  background-color: #f7d02c;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.grass {
+  background-color: #7ac74c;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.ice {
+  background-color: #96d9d6;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.fighting {
+  background-color: #c22e28;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.poison {
+  background-color: #a33ea1;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.ground {
+  background-color: #e2bf65;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.flying {
+  background-color: #a98ff3;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.psychic {
+  background-color: #f95587;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.bug {
+  background-color: #a6b91a;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.rock {
+  background-color: #b6a136;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.ghost {
+  background-color: #735797;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.dragon {
+  background-color: #6f35fc;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.dark {
+  background-color: #705746;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.steel {
+  background-color: #b7b7ce;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.fairy {
+  background-color: #d685ad;
+  padding: 12%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+.shadow {
+  background-color: #000000;
+  padding: 10%;
+  border-radius: 20%;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+
+/* normal: '#A8A77A',
+fire: '#EE8130',
+water: '#6390F0',
+electric: '#F7D02C',
+grass: '#7AC74C',
+ice: '#96D9D6',
+fighting: '#C22E28',
+poison: '#A33EA1',
+ground: '#E2BF65',
+flying: '#A98FF3',
+psychic: '#F95587',
+bug: '#A6B91A',
+rock: '#B6A136',
+ghost: '#735797',
+dragon: '#6F35FC',
+dark: '#705746',
+steel: '#B7B7CE',
+fairy: '#D685AD', */

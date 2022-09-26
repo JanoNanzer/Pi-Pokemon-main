@@ -1,0 +1,101 @@
+.outerDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.innerDiv {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pokediv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.detailName {
+  margin: 22px;
+  display: flex;
+  justify-content: center;
+  font-family: AlleynW01-Regular;
+}
+
+.linkHome {
+  text-decoration: underline;
+  display: flex;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 100px;
+  width: 55px;
+  color: black;
+  cursor: pointer;
+  font-family: AlleynW01-Regular;
+  transition: color 0.5s;
+}
+.linkHome:hover {
+  color: rgb(255, 255, 255);
+}
+
+.delete {
+  position: absolute;
+  bottom: 30px;
+  right: 185px;
+}
+
+.deleteButton {
+  text-decoration: none;
+  width: 120%;
+  cursor: pointer;
+  background-color: rgb(216, 64, 64);
+  color: rgb(241, 241, 241);
+  border-radius: 5px;
+}
+
+.pokeImage {
+
+  max-width: 385px;
+}
+
+.detailTable {
+  width: 100%;
+  font-weight: 500;
+}
+
+.divPerspective {
+  perspective: 400px;
+}
+
+.detailInfoLeft {
+  background-color: #0000002b;
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  height: 190px;
+  width: 230px;
+  transition: 0.3s;
+  transform: rotateY(20deg);
+}
+
+.detailInfoLeft:hover {
+  transform: rotateY(0deg);
+}
+
+.detailInfoRight {
+  background-color: #0000002b;
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  height: 190px;
+  width: 230px;
+  transition: 0.3s;
+  transform: rotateY(340deg);
+}
+
+.detailInfoRight:hover {
+  transform: rotateY(360deg);
+}
