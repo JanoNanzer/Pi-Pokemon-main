@@ -1,4 +1,13 @@
-@import url(https://db.onlinewebfonts.com/c/faa9c8362473bf8b1d2886cfb5962735?family=AlleynW01-Regular);
+/* @import url(https://db.onlinewebfonts.com/c/faa9c8362473bf8b1d2886cfb5962735?family=AlleynW01-Regular); */
+@font-face {font-family: "AlleynW01-Regular";
+  src: url("https://db.onlinewebfonts.com/t/faa9c8362473bf8b1d2886cfb5962735.eot");
+  src: url("https://db.onlinewebfonts.com/t/faa9c8362473bf8b1d2886cfb5962735.eot?#iefix") format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/faa9c8362473bf8b1d2886cfb5962735.woff2") format("woff2"),
+  url("https://db.onlinewebfonts.com/t/faa9c8362473bf8b1d2886cfb5962735.woff") format("woff"),
+  url("https://db.onlinewebfonts.com/t/faa9c8362473bf8b1d2886cfb5962735.ttf") format("truetype"),
+  url("https://db.onlinewebfonts.com/t/faa9c8362473bf8b1d2886cfb5962735.svg#AlleynW01-Regular") format("svg");
+}
+
 
 body {
   background-image: url("../PokemonImages/966315.png");
