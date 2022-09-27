@@ -14,7 +14,7 @@ const validate = (input, allPokemons) => {
     allPokemons.some((e) => e.name.toUpperCase() === input.name.toUpperCase())
   )
     errors.name = "Name already exist";
-  if(input.name.length === 13) errors.name = "Name can\'t be longer than 30 characters";
+  if(input.name.length === 13) errors.name = "Name can\'t be longer than 13 characters";
   if (input.hp < 1 || input.hp > 500)
     errors.hp = "HP value must be between 1-500";
   if (input.attack < 1 || input.attack > 750)
@@ -142,7 +142,7 @@ const PokemonCreate = () => {
             <div className="innerDivContainer">
               <label className="inputsName">Name </label>
               <input
-                maxLength="30"
+                maxLength="13"
                 className="inputs"
                 type="text"
                 autoComplete="off"
