@@ -9,11 +9,12 @@ const validate = (input, allPokemons) => {
   let errors = {};
 
   if (!/^[ a-zA-Z ]+$/.test(input.name) || !input.name)
-    errors.name = "Name must be only letter and not empty";
+    errors.name = "Name must be only letters and not empty";
   if (
     allPokemons.some((e) => e.name.toUpperCase() === input.name.toUpperCase())
   )
     errors.name = "Name already exist";
+  if(input.name.length === 30) errors.name = "Name can\'t be longer than 30 characters";
   if (input.hp < 1 || input.hp > 500)
     errors.hp = "HP value must be between 1-500";
   if (input.attack < 1 || input.attack > 750)
@@ -141,6 +142,7 @@ const PokemonCreate = () => {
             <div className="innerDivContainer">
               <label className="inputsName">Name </label>
               <input
+                maxLength="30"
                 className="inputs"
                 type="text"
                 autoComplete="off"
@@ -156,6 +158,8 @@ const PokemonCreate = () => {
             <div className="innerDivContainer">
               <label className="inputsName">HP </label>
               <input
+                min="1"
+                max="500"
                 className="inputs"
                 type="number"
                 value={input.hp}
@@ -170,6 +174,8 @@ const PokemonCreate = () => {
             <div className="innerDivContainer">
               <label className="inputsName">Attack </label>
               <input
+                min="1"
+                max="750"
                 className="inputs"
                 type="number"
                 value={input.attack}
@@ -184,6 +190,8 @@ const PokemonCreate = () => {
             <div className="innerDivContainer">
               <label className="inputsName">Defense </label>
               <input
+                min="1"
+                max="750"
                 className="inputs"
                 type="number"
                 value={input.defense}
@@ -198,6 +206,8 @@ const PokemonCreate = () => {
             <div className="innerDivContainer">
               <label className="inputsName">Speed </label>
               <input
+                min="1"
+                max="500"
                 className="inputs"
                 type="number"
                 value={input.speed}
@@ -212,6 +222,8 @@ const PokemonCreate = () => {
             <div className="innerDivContainer">
               <label className="inputsName">Height </label>
               <input
+                min="1"
+                max="1000"
                 className="inputs"
                 type="number"
                 value={input.height}
@@ -226,6 +238,8 @@ const PokemonCreate = () => {
             <div className="innerDivContainer">
               <label className="inputsName">Weight </label>
               <input
+                min="1"
+                max="1000"
                 className="inputs"
                 type="number"
                 value={input.weight}

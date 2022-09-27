@@ -10,7 +10,6 @@ const PokemonDetail = (props) => {
   const dispatch = useDispatch();
   const pokemonId = useSelector((state) => state.details);
   const allPokemons = useSelector((state) => state.allPokemons);
-  console.log(allPokemons);
   const history = useHistory();
 
   useEffect(() => {
@@ -52,7 +51,7 @@ const PokemonDetail = (props) => {
                     <td>
                       #{" "}
                       {pokemonId.id < 100 || !typeof pokemonId.id === "string"
-                        ? `00${pokemonId.id}`
+                        ? pokemonId.id < 10 ? `00${pokemonId.id}` : `0${pokemonId.id}`
                         : pokemonId.id}
                     </td>
                   </tr>

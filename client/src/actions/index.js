@@ -60,7 +60,6 @@ export const createPokemon = (payload) => {
       let json = await axios.post("/addPokemon", payload);
       return json;
     } catch (error) {
-      console.log(error);
       alert(error.response.data);
     }
   };
