@@ -22,7 +22,7 @@ const PokemonDetail = (props) => {
   const handleDelete = () => {
     if (pokemonId.created) {
       dispatch(deletePoke(pokemonId.id));
-      history.push("/home");
+      setTimeout(() => history.push("/home"), 1000);
     } else {
       alert("Can not delete an original Pokemon");
     }
@@ -51,7 +51,9 @@ const PokemonDetail = (props) => {
                     <td>
                       #{" "}
                       {pokemonId.id < 100 || !typeof pokemonId.id === "string"
-                        ? pokemonId.id < 10 ? `00${pokemonId.id}` : `0${pokemonId.id}`
+                        ? pokemonId.id < 10
+                          ? `00${pokemonId.id}`
+                          : `0${pokemonId.id}`
                         : pokemonId.id}
                     </td>
                   </tr>
