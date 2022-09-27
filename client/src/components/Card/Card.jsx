@@ -20,7 +20,7 @@ const Card = ({ name, image, types, id }) => {
       <div className="divTypesCard">
         {types.map((t) => {
           return (
-            <div className={`cardType`}>
+            <div className={`cardType`} key={t}>
               <img className={`${t.toUpperCase()}`} src={tipos[`${t}`]} />
               <div className="typesNameFather">
                 <span className="typesNameChild" key={t}>

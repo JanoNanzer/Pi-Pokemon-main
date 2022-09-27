@@ -1,8 +1,9 @@
+@import url(https://db.onlinewebfonts.com/c/faa9c8362473bf8b1d2886cfb5962735?family=AlleynW01-Regular);
+
 body {
   background-image: url("../PokemonImages/966315.png");
   background-repeat: no-repeat;
   background-size: cover;
-
   background-position: center;
   margin: 0px;
   height: 100vh;
@@ -94,8 +95,6 @@ body {
   rgba(110, 147, 255, 1) 70%,
   rgba(52, 151, 255, 1) 100%
 ); */
-
-@import url(https://db.onlinewebfonts.com/c/faa9c8362473bf8b1d2886cfb5962735?family=AlleynW01-Regular);
 
 .titleTop {
   font-family: AlleynW01-Regular;

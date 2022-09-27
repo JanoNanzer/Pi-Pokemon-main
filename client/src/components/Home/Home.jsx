@@ -176,7 +176,7 @@ const Home = () => {
             <div className="divPokesHome">
               {currentPokemons.map((p) => {
                 return (
-                  <div className="cardsHome">
+                  <div className="cardsHome" key={p.id}>
                     <Link to={`/home/${p.id}`} className="link">
                       <Card
                         key={p.id}
