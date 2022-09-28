@@ -24,17 +24,20 @@ const Home = () => {
   const allPokemons = useSelector((state) => state.pokemons);
   const allTypes = useSelector((state) => state.types);
   const error = useSelector((state) => state.error);
-  
+
   // Set local state for select values
   const [filtros, setFiltros] = useState();
 
+  // Set local state to render when filters change
+  const [orden, setOrden] = useState();
+
   // Set paginated
-  const [orden, setOrden] = useState("");
   const [page, setPage] = useState(1);
   const [pokePerPage, setPokePerPage] = useState(12);
-  const indexOfLastPokemon = page * pokePerPage;
-  const indexOfFirstPokemon = indexOfLastPokemon - pokePerPage;
+  const indexOfLastPokemon = page * pokePerPage; // index of last pokemon in page
+  const indexOfFirstPokemon = indexOfLastPokemon - pokePerPage; // index of first pokemon in page
   const currentPokemons = allPokemons.slice(
+    // current cuantity of pokemons per page 12-24-36
     indexOfFirstPokemon,
     indexOfLastPokemon
   );
@@ -62,7 +65,7 @@ const Home = () => {
     dispatch(getPokemonByType(e.target.value));
     setPage(1);
     setFiltros();
-    setOrden(`Order ${e.target.value}`);
+    setOrden(e.target.value);
   };
 
   // Filter by creation
@@ -71,7 +74,7 @@ const Home = () => {
     dispatch(filterCreated(e.target.value));
     setPage(1);
     setFiltros();
-    setOrden(`Order ${e.target.value}`);
+    setOrden(e.target.value);
   };
 
   // Filter by Alphabet
@@ -80,7 +83,7 @@ const Home = () => {
     dispatch(orderByAlphabet(e.target.value));
     setPage(1);
     setFiltros();
-    setOrden(`Order ${e.target.value}`);
+    setOrden(e.target.value);
   };
 
   // Filter by attack points
@@ -89,7 +92,7 @@ const Home = () => {
     dispatch(orderByAtack(e.target.value));
     setPage(1);
     setFiltros();
-    setOrden(`Order ${e.target.value}`);
+    setOrden(e.target.value);
   };
 
   return (
