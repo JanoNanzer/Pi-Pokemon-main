@@ -160,6 +160,7 @@ const Home = () => {
             <SearchBar setPage={setPage} />
           </div>
           <Paginado
+            setPage={setPage}
             page={page}
             pokePerPage={pokePerPage}
             allPokemons={allPokemons.length}
