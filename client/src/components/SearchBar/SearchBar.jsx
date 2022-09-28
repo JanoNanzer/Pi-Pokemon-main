@@ -8,11 +8,13 @@ const SearchBar = ({ setPage }) => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
 
+  // Save input value
   const handleInputChange = (e) => {
     e.preventDefault();
     setName(e.target.value);
   };
 
+  // Create new pokemon and set input empty
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(getPokemonByName(name));

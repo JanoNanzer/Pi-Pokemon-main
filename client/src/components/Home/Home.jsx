@@ -19,10 +19,16 @@ import imageError from "../PokemonImages/Mewspinning.gif";
 
 const Home = () => {
   const dispatch = useDispatch();
+
+  // States from reducer
   const allPokemons = useSelector((state) => state.pokemons);
   const allTypes = useSelector((state) => state.types);
   const error = useSelector((state) => state.error);
+  
+  // Set local state for select values
+  const [filtros, setFiltros] = useState();
 
+  // Set paginated
   const [orden, setOrden] = useState("");
   const [page, setPage] = useState(1);
   const [pokePerPage, setPokePerPage] = useState(12);
@@ -33,8 +39,6 @@ const Home = () => {
     indexOfLastPokemon
   );
 
-  const [filtros, setFiltros] = useState();
-
   const paginado = (pagNumber) => {
     setPage(pagNumber);
   };
@@ -44,6 +48,7 @@ const Home = () => {
     dispatch(getTypes());
   }, [dispatch]);
 
+  // Reload all pokemons & set page 1
   const handleClick = (e) => {
     e.preventDefault();
     dispatch(getPokemons());
@@ -51,6 +56,7 @@ const Home = () => {
     setPage(1);
   };
 
+  // Filter by Types
   const handleFilterByType = (e) => {
     e.preventDefault();
     dispatch(getPokemonByType(e.target.value));
@@ -59,6 +65,7 @@ const Home = () => {
     setOrden(`Order ${e.target.value}`);
   };
 
+  // Filter by creation
   const handleFilterCreated = (e) => {
     e.preventDefault();
     dispatch(filterCreated(e.target.value));
@@ -67,6 +74,7 @@ const Home = () => {
     setOrden(`Order ${e.target.value}`);
   };
 
+  // Filter by Alphabet
   const handleOrderByAlphabet = (e) => {
     e.preventDefault();
     dispatch(orderByAlphabet(e.target.value));
@@ -75,6 +83,7 @@ const Home = () => {
     setOrden(`Order ${e.target.value}`);
   };
 
+  // Filter by attack points
   const handleOrderByAttack = (e) => {
     e.preventDefault();
     dispatch(orderByAtack(e.target.value));

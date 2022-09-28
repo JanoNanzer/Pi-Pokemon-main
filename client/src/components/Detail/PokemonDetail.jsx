@@ -8,8 +8,12 @@ import "../PokemonImages/CardsColor/CardsColor.css";
 
 const PokemonDetail = (props) => {
   const dispatch = useDispatch();
+
+  // States from reducer
   const pokemonId = useSelector((state) => state.details);
   const allPokemons = useSelector((state) => state.allPokemons);
+  
+  // Come back to home page
   const history = useHistory();
 
   useEffect(() => {
@@ -19,6 +23,7 @@ const PokemonDetail = (props) => {
     };
   }, [dispatch]);
 
+  // Delete pokemon
   const handleDelete = () => {
     if (pokemonId.created) {
       dispatch(deletePoke(pokemonId.id));
@@ -28,6 +33,7 @@ const PokemonDetail = (props) => {
     }
   };
 
+  // Split api pokemon types, and make an array of each types
   let types =
     typeof pokemonId.id === "string"
       ? pokemonId.types.split(", ")

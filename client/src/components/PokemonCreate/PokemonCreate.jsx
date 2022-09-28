@@ -5,8 +5,9 @@ import { getTypes, createPokemon } from "../../actions";
 import "./PokemonCreate.css";
 import "../PokemonImages/PokemonTypesColor/PokemonTypesColor.css";
 
+// Function to validate each input
 const validate = (input, allPokemons) => {
-  let errors = {};
+  let errors = {}; // object with every posible error
 
   if (!/^[ a-zA-Z ]+$/.test(input.name) || !input.name)
     errors.name = "Name must be only letters and not empty";
@@ -31,6 +32,7 @@ const validate = (input, allPokemons) => {
   return errors;
 };
 
+// Function to enable create button
 function buttonHab(p) {
   if (Object.keys(p).length === 0) return false;
   else return true;
@@ -43,6 +45,7 @@ const PokemonCreate = () => {
   const history = useHistory();
   let [button, setButton] = useState(true);
 
+  // local state to handle errors
   const [errors, setErrors] = useState([
     {
       name: " ",
@@ -57,6 +60,7 @@ const PokemonCreate = () => {
     },
   ]);
 
+  // state to save new pokemon data
   const [input, setInput] = useState({
     name: "",
     hp: "",
@@ -77,6 +81,7 @@ const PokemonCreate = () => {
     setButton(buttonHab(errors));
   }, [errors]);
 
+  // save handle change data 
   const handleChange = (e) => {
     setInput({
       ...input,
@@ -93,6 +98,7 @@ const PokemonCreate = () => {
     );
   };
 
+  // save types select  
   const handleSelect = (e) => {
     if (!input.types.includes(e.target.value)) {
       setInput({
@@ -108,6 +114,7 @@ const PokemonCreate = () => {
     );
   };
 
+  // function to create new pokemon
   const handleSubmit = (e) => {
     e.preventDefault(e);
     dispatch(createPokemon(input));
@@ -125,6 +132,7 @@ const PokemonCreate = () => {
     history.push("/home");
   };
 
+  // function to delete types 
   const handleDeleteType = (type) => {
     input.types.length === 0 ? setButton(false) : setButton(true);
     setInput({

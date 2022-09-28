@@ -1,39 +1,12 @@
 const axios = require("axios").default;
-// const { types } = require('pg');
 const { Pokemon, Type } = require("../db");
-// const defaultImage = require("./");
 
-// const getAllApiPoke = async ()=>{
-//     let allPokes = [];
-//     let apiPokemons = await axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=151')
-//     .then(e=>e.data.results);
-
-//     apiPokemons = apiPokemons.map(e=> axios.get(e.url));
-//     apiPokemons = await axios.all(apiPokemons).then((e)=>{
-//         e.map((p)=>{
-//             allPokes.push({
-//                 id: p.data.id,
-//                 name: p.data.name.charAt(0).toUpperCase() + p.data.name.slice(1),
-//                 hp: p.data.stats.find((s) => s.stat.name === "hp").base_stat,
-//                 attack: p.data.stats.find((s) => s.stat.name === "attack").base_stat,
-//                 defense: p.data.stats.find((s) => s.stat.name === "defense").base_stat,
-//                 speed: p.data.stats.find((s) => s.stat.name === "speed").base_stat,
-//                 height: p.data.height,
-//                 weight: p.data.weight,
-//                 image: p.data.sprites.other['official-artwork'].front_default,
-//                 types: p.data.types.map(e=> e.type.name)
-//             })
-//         })
-//     })
-//     console.log(allPokes)
-//     return allPokes;
-// }
-
+// Get Api Info 
 const getAllApiPoke = async () => {
   let allPokes = [];
   const apiPokemons = await axios.get(
     "https://pokeapi.co/api/v2/pokemon/?limit=60"
-  ); //20 pokemons
+  );
   // const apiPokemonsNext = await axios.get(apiPokemons.data.next); //40 pokemons
   // const apiPokemonsNext2 = await axios.get(apiPokemonsNext.data.next); //60 pokemons
   // const apiPokemonsNext3 = await axios.get(apiPokemonsNext2.data.next);//80 pokemons
@@ -68,6 +41,7 @@ const getAllApiPoke = async () => {
   return allPokes;
 };
 
+// Get Created Pokemons from DB
 const getDataBasePoke = async () => {
   const allPokeDB = await Pokemon.findAll({
     include: {
@@ -79,6 +53,7 @@ const getDataBasePoke = async () => {
   return allPokeDB;
 };
 
+// Concat info from API and DB 
 const getAllinfo = async () => {
   const infoApi = await getAllApiPoke();
   let infoDb = await getDataBasePoke();
@@ -92,7 +67,7 @@ const getAllinfo = async () => {
   const allInfo = infoApi.concat(infoDb);
   return allInfo;
 };
-
+// Create New Pokemon
 const createNewPoke = async (
   name,
   hp,
@@ -123,6 +98,7 @@ const createNewPoke = async (
   return newPoke;
 };
 
+// Get all types and save then into DB
 const getTypes = async () => {
   const apiData = await axios.get("https://pokeapi.co/api/v2/type");
 

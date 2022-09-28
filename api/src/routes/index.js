@@ -11,6 +11,7 @@ const router = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
+// Get all pokemons and find one by name
 router.get("/pokemon", async (req, res) => {
   try {
     let name = req.query.name;
@@ -29,6 +30,7 @@ router.get("/pokemon", async (req, res) => {
   }
 });
 
+// Get all pokemon types
 router.get("/types", async (req, res) => {
   try {
     let allTypes = await getTypes();
@@ -38,6 +40,7 @@ router.get("/types", async (req, res) => {
   }
 });
 
+// Find pokemon by id
 router.get("/:id", async (req, res) => {
   try {
     let id = req.params.id;
@@ -53,6 +56,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// Delete pokemon
 router.delete("/delete/:id", async (req, res) => {
   const id = req.params.id;
   try {
@@ -70,6 +74,7 @@ router.delete("/delete/:id", async (req, res) => {
   }
 });
 
+// Create new Pokemon
 router.post("/addPokemon", async (req, res) => {
   try {
     let { name, hp, attack, defense, speed, height, weight, image, types } =
