@@ -53,7 +53,7 @@ const PokemonDetail = (props) => {
               <div className="detailInfoLeft">
                 <table className="detailTable">
                   <tr>
-                    <td>Id</td>
+                    <td className="firstValues">Id</td>
                     <td>
                       #{" "}
                       {pokemonId.id < 100 || !typeof pokemonId.id === "string"
@@ -64,15 +64,15 @@ const PokemonDetail = (props) => {
                     </td>
                   </tr>
                   <tr>
-                    <td>Height</td>
+                    <td className="firstValues">Height</td>
                     <td>{pokemonId.height / 10}m</td>
                   </tr>
                   <tr>
-                    <td>Weight</td>
+                    <td className="firstValues">Weight</td>
                     <td>{pokemonId.weight / 10}kg</td>
                   </tr>
                   <tr>
-                    <td>Types</td>
+                    <td className="firstValues">Types</td>
                     {types &&
                       types.map((t) => {
                         return (
@@ -92,19 +92,19 @@ const PokemonDetail = (props) => {
               <div className="detailInfoRight">
                 <table className="detailTable">
                   <tr>
-                    <td>HP</td>
+                    <td className="firstValues">HP</td>
                     <td>{pokemonId.hp}</td>
                   </tr>
                   <tr>
-                    <td>Attack</td>
+                    <td className="firstValues">Attack</td>
                     <td>{pokemonId.attack}</td>
                   </tr>
                   <tr>
-                    <td>Defense</td>
+                    <td className="firstValues">Defense</td>
                     <td>{pokemonId.defense}</td>
                   </tr>
                   <tr>
-                    <td>Speed</td>
+                    <td className="firstValues">Speed</td>
                     <td>{pokemonId.speed}</td>
                   </tr>
                 </table>

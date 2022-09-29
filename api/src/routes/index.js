@@ -11,6 +11,9 @@ const router = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
+// .then(res=>)
+// .catch
+
 // Get all pokemons and find one by name
 router.get("/pokemon", async (req, res) => {
   try {

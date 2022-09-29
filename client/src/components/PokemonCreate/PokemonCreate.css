@@ -68,6 +68,7 @@
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0);
   font-weight: 550;
+  transition: 0.3s;
 }
 
 .divBottomButtons {
@@ -83,6 +84,7 @@
   color: rgb(241, 241, 241);
   border: none;
   border-radius: 5px;
+  transition: 0.5s;
 }
 
 .buttonCreateDisabled {
@@ -91,6 +93,7 @@
   color: rgb(145, 142, 142);
   border: none;
   border-radius: 5px;
+  transition: 0.5s;
 }
 
 .goBackCreate {
@@ -115,4 +118,5 @@
 
 .tituloCreatePokemon {
   font-family: AlleynW01-Regular;
+  text-shadow: 0px 0px 30px #ffffff;
 }

@@ -15,7 +15,8 @@ const validate = (input, allPokemons) => {
     allPokemons.some((e) => e.name.toUpperCase() === input.name.toUpperCase())
   )
     errors.name = "Name already exist";
-  if(input.name.length === 14) errors.name = "Name can\'t be longer than 13 characters";
+  if (input.name.length === 14)
+    errors.name = "Name can't be longer than 13 characters";
   if (input.hp < 1 || input.hp > 500)
     errors.hp = "HP value must be between 1-500";
   if (input.attack < 1 || input.attack > 750)
@@ -81,7 +82,7 @@ const PokemonCreate = () => {
     setButton(buttonHab(errors));
   }, [errors]);
 
-  // save handle change data 
+  // save handle change data
   const handleChange = (e) => {
     setInput({
       ...input,
@@ -98,7 +99,7 @@ const PokemonCreate = () => {
     );
   };
 
-  // save types select  
+  // save types select
   const handleSelect = (e) => {
     if (!input.types.includes(e.target.value)) {
       setInput({
@@ -132,7 +133,7 @@ const PokemonCreate = () => {
     history.push("/home");
   };
 
-  // function to delete types 
+  // function to delete types
   const handleDeleteType = (type) => {
     input.types.length === 0 ? setButton(false) : setButton(true);
     setInput({

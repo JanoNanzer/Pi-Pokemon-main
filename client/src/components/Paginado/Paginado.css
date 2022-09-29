@@ -14,6 +14,7 @@
   display: flex;
   color: rgb(214, 214, 214);
   font-weight: 500;
+  font-family: AlleynW01-Regular;
 }
 
 .listItem {
@@ -35,7 +36,7 @@
 }
 
 .listItem:hover {
-  background-color: rgba(166, 201, 230, 0.639);
+  transform: scale(1.1);
 }
 
 .listItemSelected {
@@ -53,8 +54,38 @@
   border-style: solid;
   border-width: 2px;
   border-color: rgb(125 147 255);
+  transform: scale(1.1);
 }
 
 .arrowBack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 5px;
+  height: 25px;
+  width: 25px;
+  border-radius: 25%;
+  background-color: rgba(70, 130, 180, 0.639);
+  cursor: pointer;
+  line-height: 1em;
+  /* transition: background-color 0.5s; */
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(125 147 255);
+  color: rgb(214, 214, 214);
   transform: rotateY(180deg);
 }
+
+.arrowBack:hover {
+  /* background-color: rgba(166, 201, 230, 0.639); */
+  /* transform: rotateY(180deg); */
+  transform: scale(1.1) rotateY(180deg) ;
+}
+
+/* .arrowBack:active {
+  background-color: rgba(166, 201, 230, 0.639);
+}
+
+.listItem:active{
+  background-color: rgba(166, 201, 230, 0.639);
+} */

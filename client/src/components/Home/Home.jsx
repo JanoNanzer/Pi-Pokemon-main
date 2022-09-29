@@ -17,6 +17,14 @@ import Loading from "../Loading/Loading";
 import "./Home.css";
 import imageError from "../PokemonImages/Mewspinning.gif";
 
+
+// class Home extends Component {}
+// componentDidMount(){}
+// render(){}
+// mapStateToProps -> traigo state
+// mapDispatchToProps -> traigo la function
+// connect(mapStateToProps, mapDispatchToProps)(Home) -> conecto todo
+
 const Home = () => {
   const dispatch = useDispatch();
 

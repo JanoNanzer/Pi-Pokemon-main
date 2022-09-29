@@ -21,7 +21,7 @@ const Paginado = ({ pokePerPage, allPokemons, paginado, page, setPage }) => {
   return (
     <nav className="navPag">
       <ul className="ulPag">
-        <li onClick={prevPage} className={"listItem arrowBack"}>
+        <li onClick={prevPage} className={"arrowBack"}>
           ➔
         </li>
         {pageNumbers &&
