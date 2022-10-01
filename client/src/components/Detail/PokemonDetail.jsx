@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPokemonId, setDetailEmpty, deletePoke } from "../../actions";
@@ -12,7 +12,12 @@ const PokemonDetail = (props) => {
   // States from reducer
   const pokemonId = useSelector((state) => state.details);
   const allPokemons = useSelector((state) => state.allPokemons);
-  
+
+  // Set states for confirm box
+  const deleteConfirmation = useSelector((state) => state.deleteConfirmation);
+  const [confirmBox, setConfirmbox] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   // Come back to home page
   const history = useHistory();
 
@@ -24,14 +29,35 @@ const PokemonDetail = (props) => {
   }, [dispatch]);
 
   // Delete pokemon
-  const handleDelete = () => {
-    if (pokemonId.created) {
-      dispatch(deletePoke(pokemonId.id));
-      setTimeout(() => history.push("/home"), 1000);
-    } else {
-      alert("Can not delete an original Pokemon");
-    }
-  };
+  // const handleDelete = () => {
+  //   // if (pokemonId.created) {
+  //     dispatch(deletePoke(pokemonId.id));
+  //     setTimeout(() => history.push("/home"), 1000);
+  //   // } else {
+  //   //   alert("Can not delete an original Pokemon");
+  //   // }
+  // };
+
+  function handleDelete() {
+    setConfirmbox(true);
+  }
+
+  function denyDelete() {
+    setConfirmbox(false);
+    // history.push("/home");
+  }
+
+  function acceptDelete() {
+    dispatch(deletePoke(pokemonId.id));
+    setConfirmbox(false);
+    setSuccess(true);
+  }
+
+  function successfullDelete() {
+    setSuccess(false);
+    // dispatch(clearError())
+    history.push("/home");
+  }
 
   // Split api pokemon types, and make an array of each types
   let types =
@@ -111,12 +137,37 @@ const PokemonDetail = (props) => {
               </div>
             </div>
           </div>
-
-          <div className="delete">
-            <button className="deleteButton" onClick={handleDelete}>
-              Delete
-            </button>
-          </div>
+          {typeof pokemonId.id === "string" ? (
+            <div className="delete">
+              <button className="deleteButton" onClick={handleDelete}>
+                Delete
+              </button>
+            </div>
+          ) : null}
+          {confirmBox && (
+            <div className="confirmationBox">
+              <h2>{`You want to delete ${pokemonId.name} ?`}</h2>
+              <div className="confirmationContainer">
+                <button className="confirmButton denied" onClick={denyDelete}>
+                  NO
+                </button>
+                <button className="confirmButton confirmed" onClick={acceptDelete}>
+                  YES
+                </button>
+              </div>
+            </div>
+          )}
+          {success && (
+            <div className='successContainer'>
+              <h2>{deleteConfirmation}</h2>
+              <button
+                className='confirmButton confirmed'
+                onClick={successfullDelete}
+              >
+                Ok
+              </button>
+            </div>
+          )}
         </div>
       ) : (
         <LoadingDetail />

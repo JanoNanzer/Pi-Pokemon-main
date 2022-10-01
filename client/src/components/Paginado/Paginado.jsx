@@ -2,7 +2,6 @@ import React from "react";
 import "./Paginado.css";
 
 const Paginado = ({ pokePerPage, allPokemons, paginado, page, setPage }) => {
-  
   const pageNumbers = []; // arr with all pages numbers
   for (let i = 1; i <= Math.ceil(allPokemons / pokePerPage); i++) {
     pageNumbers.push(i);
@@ -21,9 +20,12 @@ const Paginado = ({ pokePerPage, allPokemons, paginado, page, setPage }) => {
   return (
     <nav className="navPag">
       <ul className="ulPag">
-        <li onClick={prevPage} className={"arrowBack"}>
-          ➔
-        </li>
+        {pageNumbers.length !== 0 ? (
+          <li onClick={prevPage} className={"arrowBack"}>
+            ➔
+          </li>
+        ) : null}
+
         {pageNumbers &&
           pageNumbers.map((number) => (
             <li
@@ -34,9 +36,11 @@ const Paginado = ({ pokePerPage, allPokemons, paginado, page, setPage }) => {
               <a className="pageNumber">{number}</a>
             </li>
           ))}
-        <li onClick={nextPage} className={"listItem"}>
-          ➔
-        </li>
+        {pageNumbers.length !== 0 ? (
+          <li onClick={nextPage} className={"listItem"}>
+            ➔
+          </li>
+        ) : null}
       </ul>
     </nav>
   );

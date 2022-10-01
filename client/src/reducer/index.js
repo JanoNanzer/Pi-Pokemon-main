@@ -6,6 +6,7 @@ const initialState = {
   error: null,
   details: [],
   types: [],
+  deleteConfirmation:''
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -113,7 +114,8 @@ const rootReducer = (state = initialState, action) => {
         details: [],
       };
     case "DELETE_POKEMON":
-      return { ...state };
+      return { ...state,
+      deleteConfirmation: action.payload  };
     case "GET_POKE_STORE":
       return {
         ...state,

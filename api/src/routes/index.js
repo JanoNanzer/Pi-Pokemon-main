@@ -1,7 +1,7 @@
 const axios = require("axios");
 const { Router } = require("express");
 const { Pokemon, Type } = require("../db");
-const { getAllinfo, createNewPoke, getTypes } = require("./functions");
+const { getAllinfo, createNewPoke, getTypes, getDataBasePoke } = require("./functions");
 
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
@@ -11,8 +11,6 @@ const router = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 
-// .then(res=>)
-// .catch
 
 // Get all pokemons and find one by name
 router.get("/pokemon", async (req, res) => {
@@ -99,5 +97,14 @@ router.post("/addPokemon", async (req, res) => {
     res.status(404).json("Name already exist. Choose another name");
   }
 });
+
+// router.delete('/deletePokemons', async(req,res)=>{
+//   try {
+//     await Pokemon.destroy({where: {name:'Henry'}})
+//     res.send('Delete Complete')
+//   } catch (error) {
+    
+//   }
+// })
 
 module.exports = router;
