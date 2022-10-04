@@ -14,9 +14,9 @@
 .animated-button1 {
   background: #000000c7;
   border-radius: 4px;
-  padding: 50px 11px;
+  padding: 51px 11px;
   display: inline-block;
-  transform: translate(0%, 0%);
+  -webkit-transform: translate(0%, 0%);
   overflow: hidden;
   color: #ffffff;
   font-size: 15px;
@@ -24,9 +24,9 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  position: absolute;
-  top: 268px;
-  left: 425px;
+  position: relative;
+  top: 229px;
+  left: -167px;
   cursor: pointer;
   transition: 0.3s;
 }

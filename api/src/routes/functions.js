@@ -1,7 +1,7 @@
 const axios = require("axios").default;
 const { Pokemon, Type } = require("../db");
 
-// Get Api Info 
+// Get Api Info
 const getAllApiPoke = async () => {
   let allPokes = [];
   const apiPokemons = await axios.get(
@@ -53,7 +53,7 @@ const getDataBasePoke = async () => {
   return allPokeDB;
 };
 
-// Concat info from API and DB 
+// Concat info from API and DB
 const getAllinfo = async () => {
   const infoApi = await getAllApiPoke();
   let infoDb = await getDataBasePoke();
@@ -95,7 +95,11 @@ const createNewPoke = async (
 
   const DataBaseTypes = await Type.findAll({ where: { name: types } });
   await newPoke.addTypes(DataBaseTypes);
-  return newPoke;
+
+  const newPokeWithTypes = { ...newPoke.dataValues, types: types.join(", ") };
+
+  console.log(newPokeWithTypes);
+  return newPokeWithTypes;
 };
 
 // Get all types and save then into DB

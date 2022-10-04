@@ -6,7 +6,7 @@ const initialState = {
   error: null,
   details: [],
   types: [],
-  deleteConfirmation:''
+  deleteConfirmation: "",
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -96,12 +96,17 @@ const rootReducer = (state = initialState, action) => {
     case "GET_POKEMON_NAME":
       return {
         ...state,
-        pokemons: action.payload,
-        error: null,
+        pokemons: pokeName.filter((e) =>
+          e.name.toLowerCase().includes(action.payload.toLowerCase())
+        ),
+        // pokemons: action.payload,
+        // error: null,
       };
     case "CREATE_POKEMON":
       return {
         ...state,
+        pokemons: [...state.pokemons, action.payload],
+        allPokemons: [...state.allPokemons, action.payload],
       };
     case "GET_POKEMON_ID":
       return {
@@ -114,12 +119,19 @@ const rootReducer = (state = initialState, action) => {
         details: [],
       };
     case "DELETE_POKEMON":
-      return { ...state,
-      deleteConfirmation: action.payload  };
+      return {
+        ...state,
+        pokemons: state.pokemons.filter(
+          (p) => p.id.toString() !== action.payload
+        ),
+        allPokemons: state.allPokemons.filter(
+          (p) => p.id.toString() !== action.payload
+        ),
+      };
     case "GET_POKE_STORE":
       return {
         ...state,
-        pokemons: state.allPokemons,
+        /* pokemons: state.allPokemons, */
       };
     default:
       return { ...state };

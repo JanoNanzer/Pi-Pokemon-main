@@ -8,6 +8,7 @@ import {
   filterCreated,
   orderByAlphabet,
   orderByAtack,
+  getPokeStore
 } from "../../actions";
 import { Link } from "react-router-dom";
 import Card from "../Card/Card.jsx";
@@ -32,6 +33,7 @@ const Home = () => {
   const allPokemons = useSelector((state) => state.pokemons);
   const allTypes = useSelector((state) => state.types);
   const error = useSelector((state) => state.error);
+  const pokeBackUp = useSelector((state) => state.allPokemons);
 
   // Set local state for select values
   const [filtros, setFiltros] = useState();
@@ -55,14 +57,14 @@ const Home = () => {
   };
 
   useEffect(() => {
-    dispatch(getPokemons());
+    pokeBackUp.length > 0 ? dispatch(getPokeStore()) : dispatch(getPokemons());
     dispatch(getTypes());
   }, [dispatch]);
 
   // Reload all pokemons & set page 1
   const handleClick = (e) => {
     e.preventDefault();
-    dispatch(getPokemons());
+    pokeBackUp.length > 0 ? dispatch(getPokeStore()) : dispatch(getPokemons());
     setFiltros("title");
     setPage(1);
   };

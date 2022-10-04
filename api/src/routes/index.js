@@ -1,7 +1,12 @@
 const axios = require("axios");
 const { Router } = require("express");
 const { Pokemon, Type } = require("../db");
-const { getAllinfo, createNewPoke, getTypes, getDataBasePoke } = require("./functions");
+const {
+  getAllinfo,
+  createNewPoke,
+  getTypes,
+  getDataBasePoke,
+} = require("./functions");
 
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
@@ -10,7 +15,6 @@ const router = Router();
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
-
 
 // Get all pokemons and find one by name
 router.get("/pokemon", async (req, res) => {
@@ -65,9 +69,11 @@ router.delete("/delete/:id", async (req, res) => {
       const findPoke = await Pokemon.findByPk(id);
       if (findPoke.created) {
         await findPoke.destroy();
-        return res.send("Pokemon has been deleted");
+        return res.send({ msg: "Pokemon has been deleted", pokemon: id });
       } else {
-        return res.status(404).json("Can not delete an original Pokemon");
+        return res
+          .status(404)
+          .json({ msg: "Can not delete an original Pokemon" });
       }
     }
   } catch (error) {
@@ -103,7 +109,7 @@ router.post("/addPokemon", async (req, res) => {
 //     await Pokemon.destroy({where: {name:'Henry'}})
 //     res.send('Delete Complete')
 //   } catch (error) {
-    
+
 //   }
 // })
 

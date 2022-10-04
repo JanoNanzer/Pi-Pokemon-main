@@ -42,25 +42,29 @@ export const orderByAtack = (payload) => {
   };
 };
 
+// export const getPokemonByName = (name) => {
+//   return async (dispatch) => {
+//     try {
+//       if (name === "") return alert("Please introduce a valid name");
+//       var json = await axios.get(`/pokemon?name=${name}`);
+//       return dispatch({ type: "GET_POKEMON_NAME", payload: json.data });
+//     } catch (error) {
+//       alert(error.response.data);
+//     }
+//   };
+// };
+
 export const getPokemonByName = (name) => {
-  return async (dispatch) => {
-    try {
-      if (name === "") return alert("Please introduce a valid name");
-      var json = await axios.get(`/pokemon?name=${name}`);
-      return dispatch({ type: "GET_POKEMON_NAME", payload: json.data });
-    } catch (error) {
-      alert(error.response.data);
-    }
-  };
+  return { type: "GET_POKEMON_NAME", payload: name };
 };
 
 export const createPokemon = (payload) => {
   return async (dispatch) => {
     try {
       let json = await axios.post("/addPokemon", payload);
-      return json;
+      return dispatch({ type: "CREATE_POKEMON", payload: json.data });
     } catch (error) {
-      alert(error.response.data);
+      alert(error);
     }
   };
 };
@@ -85,7 +89,7 @@ export const deletePoke = (id) => {
     try {
       let json = await axios.delete(`/delete/${id}`);
       // alert(json.data);
-      return dispatch({ type: "DELETE_POKEMON", payload: json.data });
+      return dispatch({ type: "DELETE_POKEMON", payload: json.data.pokemon });
     } catch (error) {
       console.log(error);
       alert(error.response.data);
