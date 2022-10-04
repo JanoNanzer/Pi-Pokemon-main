@@ -88,7 +88,6 @@ export const deletePoke = (id) => {
   return async (dispatch) => {
     try {
       let json = await axios.delete(`/delete/${id}`);
-      // alert(json.data);
       return dispatch({ type: "DELETE_POKEMON", payload: json.data.pokemon });
     } catch (error) {
       console.log(error);
