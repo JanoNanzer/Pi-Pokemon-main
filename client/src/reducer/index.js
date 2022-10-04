@@ -94,6 +94,7 @@ const rootReducer = (state = initialState, action) => {
         pokemons: sortedArrByAtack,
       };
     case "GET_POKEMON_NAME":
+      let pokeName = state.allPokemons
       return {
         ...state,
         pokemons: pokeName.filter((e) =>
