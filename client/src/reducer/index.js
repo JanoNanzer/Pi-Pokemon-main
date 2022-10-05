@@ -132,7 +132,7 @@ const rootReducer = (state = initialState, action) => {
     case "GET_POKE_STORE":
       return {
         ...state,
-        /* pokemons: state.allPokemons, */
+        pokemons: state.allPokemons,
       };
     default:
       return { ...state };
