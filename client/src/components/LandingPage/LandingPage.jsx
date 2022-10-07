@@ -37,7 +37,6 @@ const LandingPage = () => {
         </Link>
       </div>
       <div className="divAbout">
-        <p className="pAbout">About</p>
         <p className="developed">Developed by Jano Nanzer</p>
         <div className="iconsContainer">
           <a
