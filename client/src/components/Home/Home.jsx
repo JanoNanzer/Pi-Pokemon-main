@@ -8,7 +8,8 @@ import {
   filterCreated,
   orderByAlphabet,
   orderByAtack,
-  getPokeStore
+  getPokeStore,
+  setErrorEmpty
 } from "../../actions";
 import { Link } from "react-router-dom";
 import Card from "../Card/Card.jsx";
@@ -65,6 +66,7 @@ const Home = () => {
   const handleClick = (e) => {
     e.preventDefault();
     pokeBackUp.length > 0 ? dispatch(getPokeStore()) : dispatch(getPokemons());
+    dispatch(setErrorEmpty())
     setFiltros("title");
     setPage(1);
   };
@@ -190,7 +192,7 @@ const Home = () => {
           />
           {error ? (
             <div>
-              <h2>
+              <h2 className="notMatches">
                 Not matches found, please change filters or reload all pokemons
               </h2>
               <img src={imageError} className="imageMew" />

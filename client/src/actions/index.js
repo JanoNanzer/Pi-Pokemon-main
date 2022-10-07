@@ -95,3 +95,7 @@ export const deletePoke = (id) => {
     }
   };
 };
+
+export const setErrorEmpty = () => {
+  return { type: "SET_ERROR_EMPTY" };
+};

@@ -134,6 +134,11 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         pokemons: state.allPokemons,
       };
+    case "SET_ERROR_EMPTY":
+      return {
+        ...state,
+        error: null
+      }
     default:
       return { ...state };
   }
