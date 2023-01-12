@@ -151,17 +151,20 @@ const PokemonDetail = (props) => {
                 <button className="confirmButton denied" onClick={denyDelete}>
                   NO
                 </button>
-                <button className="confirmButton confirmed" onClick={acceptDelete}>
+                <button
+                  className="confirmButton confirmed"
+                  onClick={acceptDelete}
+                >
                   YES
                 </button>
               </div>
             </div>
           )}
           {success && (
-            <div className='successContainer'>
+            <div className="successContainer">
               <h2>{deleteConfirmation}</h2>
               <button
-                className='confirmButton confirmed'
+                className="confirmButton confirmed"
                 onClick={successfullDelete}
               >
                 Ok
