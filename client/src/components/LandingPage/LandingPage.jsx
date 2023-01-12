@@ -40,7 +40,7 @@ const LandingPage = () => {
         <p className="developed">Developed by Jano Nanzer</p>
         <div className="iconsContainer">
           <a
-            href="https://www.linkedin.com/in/jano-nanzer-4410951bb/"
+            href="https://www.linkedin.com/in/janonanzer/"
             target="_blank"
           >
             <img src={linkedin} alt="LinkedIn Link" className="iconsImage"/>
