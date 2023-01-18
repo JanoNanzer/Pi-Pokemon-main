@@ -118,3 +118,19 @@ body {
 .notMatches {
   font-family: AlleynW01-Regular;
 }
+
+/* ------------------------- MEDIA QUERIES ------------------------- */
+
+/* ------------------------- 1366 X 768 FS ------------------------- */
+@media (max-height: 768px) {
+  .linksTop {
+    height: 70px;
+  }
+}
+
+/* ------------------------- 1366 X 768 NFS ------------------------- */
+@media (max-height: 617px) {
+  .linksTop {
+    height: 50px;
+  }
+}

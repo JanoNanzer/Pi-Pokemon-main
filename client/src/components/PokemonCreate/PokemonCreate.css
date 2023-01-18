@@ -6,7 +6,7 @@
 
 .innerDivCreate {
   background-color: rgba(177, 41, 41, 0.19);
-  margin: 0 20%;
+  margin: 50px 20%;
   width: 60%;
   border-radius: 2%;
 }
@@ -119,4 +119,27 @@
 .tituloCreatePokemon {
   font-family: AlleynW01-Regular;
   text-shadow: 0px 0px 30px #ffffff;
+}
+
+
+/* ------------------------- MEDIA QUERIES ------------------------- */
+
+/* ------------------------- 1366 X 768 FS ------------------------- */
+@media (max-height: 768px) {
+  .innerDivCreate {
+    margin: 18px 20%;
+  }
+  .tituloCreatePokemon{
+    margin: 75px 0px;
+  }
+}
+
+/* ------------------------- 1366 X 768 NFS ------------------------- */
+@media (max-height: 617px) {
+  .innerDivCreate {
+    margin: 50px 20%;
+  }
+  .tituloCreatePokemon{
+    margin: 0px 0px;
+  }
 }

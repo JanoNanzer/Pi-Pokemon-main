@@ -11,3 +11,19 @@
   top: 34%;
   left: 38%;
 }
+
+/* ------------------------- 1366 X 768 FS ------------------------- */
+@media (max-height: 768px) {
+  .squirtle {
+    border-radius: 110px;
+    left: 34%;
+  }
+}
+
+/* ------------------------- 1366 X 768 NFS ------------------------- */
+@media (max-height: 617px) {
+  .squirtle {
+    border-radius: 90px;
+    left: 38%;
+  }
+}

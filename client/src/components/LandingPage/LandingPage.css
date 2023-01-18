@@ -46,13 +46,13 @@
   margin: 0;
 } */
 
-.iconsContainer{
+.iconsContainer {
   display: flex;
   flex-direction: row;
   gap: 15px;
 }
 
-.iconsImage{
+.iconsImage {
   width: 6vh;
 }
 
@@ -156,5 +156,54 @@
   }
   100% {
     transform: translateY(100%);
+  }
+}
+
+/* ------------------------- MEDIA QUERIES ------------------------- */
+
+/* ------------------------- 1366 X 768 FS ------------------------- */
+@media (max-height: 768px) {
+  .animated-button1 {
+    top: 340px;
+    padding: 27px 11px;
+    left: -167px;
+  }
+}
+
+/* ------------------------- 1366 X 768 NFS ------------------------- */
+@media (max-height: 617px) {
+  .animated-button1 {
+    top: 267px;
+    left: -167px;
+    padding: 27px 11px;
+  }
+}
+
+/* ------------------------- 1920 X 1080 FS ------------------------- */
+@media (min-width: 1920px) {
+  .animated-button1 {
+    top: 483px;
+    left: -239px;
+    padding: 51px 47px;
+  }
+}
+
+/* ------------------------- 390 X 844 Iphone 12 Pro ------------------------- */
+@media (max-width: 390px) {
+  .landing {
+    flex-direction: column;
+  }
+  .divTitle {
+    margin: 28px 30px;
+    width: 80%;
+  }
+  .animated-button1 {
+    top: -8px;
+    left: -130px;
+    padding: 0px 0px;
+    width: 32%;
+  }
+  .divAbout {
+    width: 84%;
   }
 }
