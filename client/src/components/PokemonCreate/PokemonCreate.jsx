@@ -146,7 +146,7 @@ const PokemonCreate = () => {
     <div className="outterDivCreate">
       <h1 className="tituloCreatePokemon">Create your own Pokemon</h1>
       <div className="innerDivCreate">
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form className="formCreateStyle" onSubmit={(e) => handleSubmit(e)}>
           <div className="inputContainer">
             <div className="innerDivContainer">
               <label className="inputsName">Name </label>

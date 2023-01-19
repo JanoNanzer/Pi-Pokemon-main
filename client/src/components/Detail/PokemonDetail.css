@@ -177,3 +177,22 @@
     margin-top: 0px;
   }
 }
+
+/* ------------------------- 390 X 844 Iphone 12 Pro ------------------------- */
+@media (max-width: 390px) {
+  .pokediv {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .pokeImage{
+    max-width: 300px;
+  }
+  .detailName{
+    margin: 0px 22px;
+    margin-top: 40px;
+  }
+  .delete{
+    bottom: 800px;
+    right: 80px;
+  }
+}

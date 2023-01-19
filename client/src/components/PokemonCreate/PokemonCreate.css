@@ -143,3 +143,33 @@
     margin: 0px 0px;
   }
 }
+
+/* ------------------------- 390 X 844 Iphone 12 Pro ------------------------- */
+@media (max-width: 390px) {
+  .innerDivCreate {
+    margin: 90px 5%;
+    width: 90%;
+    height: 50vh;
+  }
+  .inputs{
+    width: 180px;
+  }
+  .error{
+    font-size: 10px;
+  }
+  .imageWarning{
+    font-size: 10px;
+    margin: 0 6%;
+  }
+  .secondErrorType{
+    font-size: 10px;
+  }
+  .typesContainer{
+    margin: 10% 0;
+  }
+  .formCreateStyle{
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+  }
+}

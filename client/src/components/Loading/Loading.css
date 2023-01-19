@@ -27,3 +27,13 @@
     left: 38%;
   }
 }
+
+/* ------------------------- 390 X 844 Iphone 12 Pro ------------------------- */
+@media (max-width: 390px) {
+  .squirtle {
+    height: 39%;
+    border-radius: 90px;
+    top: 41%;
+    left: 10%;
+  }
+}
